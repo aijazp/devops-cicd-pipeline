@@ -5,35 +5,18 @@
 A portfolio-grade DevOps project demonstrating automated testing, Docker containerization, Docker Hub image publishing, and continuous deployment to an AWS EC2 server using GitHub Actions.
 
 ## 🏗️ Architecture
-Developer
-│
-│ git push
-▼
-GitHub Repository
-│
-▼
-GitHub Actions
-│
-├── Run Python Tests
-│
-├── Build Docker Image
-│
-└── Push Image
-│
-▼
-Docker Hub
-│
-│ docker pull
-▼
-AWS EC2
-│
-▼
-Docker Container
-│
-▼
-Flask Application
-Port 5000
 
+```mermaid
+flowchart TD
+A[Developer] -->|git push| B[GitHub Repository]
+B --> C[GitHub Actions]
+C --> D[Run Python Tests]
+D --> E[Build Docker Image]
+E --> F[Push Image to Docker Hub]
+F --> G[AWS EC2]
+G --> H[Docker Container]
+H --> I[Flask Application]
+```
 ## 🛠️ Technologies Used
 
 - Python
